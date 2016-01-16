@@ -1,0 +1,141 @@
+/* 
+   *---------------------------------------*
+   | Project: Snake in TypeScript          |
+   *---------------------------------------*
+   | Version: 0.1                          |
+   *---------------------------------------*
+   | Author: Mateusz Piotrowicz            |
+   *---------------------------------------*
+ */
+/* -------------------------------
+   GLOBAL 
+---------------------------------- */
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font: 100 20px "Roboto", sans-serif; }
+
+select {
+  width: 130px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 30px;
+  background: #f5f5f5;
+  font: 100 20px "Roboto", sans-serif; }
+
+/* -------------------------------
+   HEADER 
+---------------------------------- */
+#header {
+  margin: 0 auto;
+  height: 70px;
+  line-height: 70px;
+  vertical-align: middle;
+  background: #f5f5f5;
+  color: #000;
+  border-bottom: 1px solid #b6b6b6;
+  font-weight: light; }
+  #header h1 {
+    text-align: center;
+    font-weight: 100; }
+
+/* -------------------------------
+   CONTENT 
+---------------------------------- */
+#game-over {
+  width: 421px;
+  height: 80px;
+  line-height: 80px;
+  vertical-align: middle;
+  margin: 20px auto;
+  background: #CC8282;
+  color: #fff;
+  border: 1px solid #CC2828;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  font-size: 26px;
+  text-align: center;
+  display: none; }
+
+#main {
+  width: 421px;
+  margin: 0 auto;
+  border: 3px solid #b6b6b6;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */ }
+  #main #grid {
+    padding: 0;
+    margin: 0 auto;
+    width: 420px;
+    height: 420px;
+    border-top: 1px solid #f5f5f5;
+    border-left: 1px solid #f5f5f5; }
+    #main #grid .cell {
+      margin: 0 auto !important;
+      width: 20px;
+      height: 20px;
+      border-right: 1px solid #f5f5f5;
+      border-bottom: 1px solid #f5f5f5;
+      background: #f5f5f5;
+      float: left; }
+    #main #grid .snake-head {
+      background: #000; }
+    #main #grid .snake-body {
+      background: #b6b6b6; }
+    #main #grid .apple {
+      background: url("../img/fruit.png"); }
+
+#score-bar {
+  padding: 10px;
+  margin-bottom: 20px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #b6b6b6;
+  text-align: center;
+  font-size: 20px; }
+  #score-bar #score {
+    font-weight: bold; }
+  #score-bar .info {
+    margin-left: 10px;
+    margin-right: 10px; }
+
+/* -------------------------------
+   BOTTOM 
+---------------------------------- */
+#bottom {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+  background: #f5f5f5;
+  border-top: 1px solid #b6b6b6; }
+  #bottom .button {
+    font: 100 26px "Roboto", sans-serif;
+    width: 200px;
+    height: 50px;
+    background: #f5f5f5;
+    color: #000;
+    border: 1px solid #b6b6b6; }
+
+/* -------------------------------
+   FOOTER 
+---------------------------------- */
+#footer {
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  background: #f5f5f5;
+  color: #000;
+  border-top: 1px solid #b6b6b6;
+  font-size: 18px;
+  font-weight: 300; }
+
+/* -------------------------------
+   RESPONSIVE 
+---------------------------------- */

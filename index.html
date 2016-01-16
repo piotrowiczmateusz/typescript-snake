@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+  	<head>
+
+	    <!-- Meta-tags -->
+
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+	    <title>Snake in TypeScript</title>
+
+	    <!-- Fonts and icons -->
+
+      <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+
+	    <!-- CSS links -->
+
+     <!-- <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+	   <link href="css/main.css" rel="stylesheet">
+
+	    <!--[if lt IE 9]>
+	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+
+  	</head>
+  	<body id="body">
+
+  		<header id="header">
+        <h1>Snake in TypeScript</h1>
+  		</header>
+
+  		<div id="score-bar">
+        <span class="info">Use 'W', 'S', 'A', 'D' to move.</span>
+        <span class="info">Score: <span id="score">0</span></span>  
+        <span class="info">Difficulty:</span>
+        <select id="difficulty">
+          <option>Easy</option>
+          <option>Medium</option>
+          <option>Hard</option>
+          <option>Expert</option>
+        </select>
+      </div>
+
+      <div id="game-over">Game Over</div>
+    
+      <main id="main">
+        <div id="grid"></div> 
+      </main>      
+
+      <div id="bottom"><button id="start" class="button">Start</button></div>
+        
+  		
+  		<footer id="footer">
+        Made by Mateusz Piotrowicz  
+      </footer>
+    
+  		<!-- Javascript -->
+
+      <script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>
+	    <script type="text/javascript" src="js/main.js"></script>
+
+  	</body>
+</html>

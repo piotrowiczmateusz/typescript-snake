@@ -1,0 +1,194 @@
+/* 
+   *---------------------------------------*
+   | Project: Snake in TypeScript          |
+   *---------------------------------------*
+   | Version: 0.1                          |
+   *---------------------------------------*
+   | Author: Mateusz Piotrowicz            |
+   *---------------------------------------*
+ */
+
+
+// SASS ELEMENTS
+
+// VARIABLES
+
+	// Colors:
+
+      $light-gray: #f5f5f5;
+      $gray: #b6b6b6;
+
+	// Fonts:
+
+      $font-family: 'Roboto', sans-serif;
+
+// MIXINS
+
+   @mixin border-radius($radius) {
+     -webkit-border-radius: $radius;
+     border-radius: $radius;
+     background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+   }
+
+   @mixin line-height($height) {
+     height: $height;
+     line-height: $height;
+     vertical-align: middle;
+   }
+
+// PARTIALS
+
+
+/* -------------------------------
+   GLOBAL 
+---------------------------------- */
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body { font: 100 20px $font-family; }
+
+select {
+   width: 130px;
+   height: 30px;
+   line-height: 30px;
+   margin-left: 30px;
+   background: $light-gray;
+   font: 100 20px $font-family; 
+}
+
+
+/* -------------------------------
+   HEADER 
+---------------------------------- */
+
+#header {
+
+   margin: 0 auto;
+   @include line-height(70px);
+   background: $light-gray;
+   color: #000;
+   border-bottom: 1px solid $gray;
+   font-weight: light;
+
+   h1 {
+      text-align: center;
+      font-weight: 100;
+   }
+}
+
+/* -------------------------------
+   CONTENT 
+---------------------------------- */
+
+#game-over {
+   width: 421px;
+   @include line-height(80px);
+   margin: 20px auto;
+   background: #CC8282;
+   color: #fff;
+   border: 1px solid #CC2828;
+   @include border-radius(5px);
+   font-size: 26px;
+   text-align: center; 
+   display: none;
+}
+
+#main {
+   width: 421px;
+   margin: 0 auto;
+   border: 3px solid $gray;  
+   @include border-radius(3px);
+
+   #grid {
+
+      padding: 0;
+      margin: 0 auto;
+      width: 420px;
+      height: 420px;
+      border-top: 1px solid $light-gray;
+      border-left: 1px solid $light-gray;
+
+      .cell {
+        margin: 0 auto!important;
+        width: 20px;
+        height: 20px;
+        border-right: 1px solid $light-gray;
+        border-bottom: 1px solid $light-gray;
+        background: $light-gray;
+        float: left;
+      }
+
+      .snake-head { background: #000; }
+      .snake-body { background: $gray; }
+      .apple { background: url("../img/fruit.png"); }
+   
+   }
+}
+
+ #score-bar {
+
+   padding: 10px;
+   margin-bottom: 20px;
+   background: $light-gray;
+   border-bottom: 1px solid $gray;
+   text-align: center;
+   font-size: 20px;
+         
+   #score { font-weight: bold; }
+
+   .info { 
+      margin-left: 10px;
+      margin-right: 10px;
+   }
+
+}
+
+/* -------------------------------
+   BOTTOM 
+---------------------------------- */
+
+#bottom {
+
+   margin: 0 auto;
+   margin-top: 30px;
+   padding: 10px;
+   text-align: center;
+   background: $light-gray;
+   border-top: 1px solid $gray;
+
+   .button {
+      font: 100 26px $font-family; 
+      width: 200px;
+      height: 50px;
+      background: $light-gray;
+      color: #000;
+      border: 1px solid $gray;
+   }
+}
+
+/* -------------------------------
+   FOOTER 
+---------------------------------- */
+
+#footer {
+   @include line-height(40px);
+   text-align: center;
+   background: $light-gray;
+   color: #000;
+   border-top: 1px solid $gray;
+   font-size: 18px;
+   font-weight: 300;
+}
+
+/* -------------------------------
+   RESPONSIVE 
+---------------------------------- */
+
+@media (max-width: 1200px) { }
+
+@media (max-width: 992px) { }
+
+@media (max-width: 768px) { }
